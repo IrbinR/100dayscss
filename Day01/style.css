@@ -1,0 +1,98 @@
+html {
+    font-size: 16px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 438px;
+}
+
+.main {
+    width: 25rem;
+    height: 25rem;
+    background-image: linear-gradient(to bottom left, #4cb1c4, #4444a2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-family: 'Courier New', 'Courier', sans-serif;
+    color: white;
+    line-height: 0.8;
+}
+
+.number {
+    width: 14.4rem;
+    height: 7rem;
+    position: relative;
+    align-items: center;
+
+}
+
+
+.number__one-left {
+    background-image: linear-gradient(90deg, #fefefe, #d1d0d0);
+    width: 1.4rem;
+    height: 2.7rem;
+    transform: translate(-21px) rotate(55deg);
+    border-radius: 0  0 0.2rem 0.2rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.number__one-right {
+    background-color: #ffffff;
+    width: 1.6rem;
+    height: 7rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    
+}
+
+.number__zero-left {
+    background: linear-gradient(90deg, #d1d0d0,#ffffff 25%);
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*transform: translate(-10px);*/
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 20px;
+}
+
+.circle {
+    background-color: #4980b5;
+    border-radius: 50%;
+    width: 4.1rem;
+    height: 4.1rem;
+}
+
+.circle2 {
+    background-color: #4a90ba;
+}
+
+.number__zero-right {
+    z-index: 1;
+    left: 118px;
+    /*transform: translate(-26px);*/
+}
+
+.text-big {
+    font-size: 5.7rem;
+    font-weight: 600;
+    width: 14.4rem;
+}
+
+.text-small {
+    font-size: 1.69rem;
+    width: 14.4rem;
+    font-weight: 600;
+}

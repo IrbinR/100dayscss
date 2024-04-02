@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272c34;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 0.5rem;
+}
+
+.container { 
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sky {
+    background-color: #7ddffc;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+
+.land {
+    background-color: #f0de75;
+    height: 30%;
+}
+
+.pyramid {
+    height: 0;
+    width: 0;
+    border-left: 60px solid #7ddffc;
+    border-right: 60px solid #7ddffc;
+    border-bottom: 55px solid #f4f3f3;
+    
+}
+
+.sun {
+   background-color: #ffef00;
+   width: 2rem; 
+   height: 2rem;
+   border-radius: 50%;
+   position: absolute;
+   bottom: -39px;
+   animation: move-sun 4000ms ease-in-out infinite;
+}
+
+@keyframes move-sun {
+    0% {
+        transform: translate(0) translate(-8.2rem);
+    }
+    50% {
+        transform: rotate(60deg) translate(-8.2rem);
+    }
+
+    100% {
+        transform: rotate(180deg) translate(-8.2rem);
+    }
+}
+
