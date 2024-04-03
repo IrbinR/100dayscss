@@ -5,6 +5,12 @@ body {
     min-height: 100vh;
 }
 
+:root {
+    --lenght:20px;
+    --color-sky: #7ddffc;
+    --color-land: #f0de75;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -23,7 +29,7 @@ main {
 }
 
 .sky {
-    background-color: #7ddffc;
+    background-color: var(--color-sky);
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -33,17 +39,45 @@ main {
 }
 
 .land {
-    background-color: #f0de75;
+    background-color: var(--color-land);
     height: 30%;
+    display: flex;
+    justify-content: center;
 }
 
 .pyramid {
-    height: 0;
     width: 0;
-    border-left: 60px solid #7ddffc;
-    border-right: 60px solid #7ddffc;
+    height: 0;
+    border-left: 60px solid var(--color-sky);
+    border-right: 60px solid var(--color-sky);
     border-bottom: 55px solid #f4f3f3;
-    
+    position: relative;
+}
+
+.land__shadow {
+    border-left-color: var(--color-land);
+    border-right-color: var(--color-land);
+    border-bottom-width: 0;
+    border-top: 55px solid #c0b25e;
+    /* transform: skew(26deg); */
+}
+
+.pyramid__left {
+    border-left-width: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom: 55px solid #696b70; 
+    position: absolute;
+    left: 0;
+}
+
+.pyramid__right { 
+    border-left-color: transparent;
+    border-right-width: var(--lenght);
+    border-right-color: transparent;
+    border-bottom: 55px solid #f4f3f3;
+    position: absolute;
+    right: calc(-1*var(--lenght));
 }
 
 .sun {
